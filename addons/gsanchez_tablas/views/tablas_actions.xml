@@ -1,0 +1,54 @@
+<odoo>
+	<data>
+		<!-- Acctiones -->		
+		<act_window 
+			id = "action_tipo_documento"
+			name = "Tipos de documentos"
+			res_model = "tipo.documento"
+			view_mode = "tree,form"
+		/>
+
+		<act_window 
+			id = "action_tipo_documento_identidad"
+			name = "Tipos de documentos de identidad"
+			res_model = "tipo.documento.identidad"
+			view_mode = "tree,form"
+		/>
+
+		<act_window 
+			id = "action_forma_pago"
+			name = "Formas de pago"
+			res_model = "forma.pago"
+			view_mode = "tree,form"
+		/>
+
+		<act_window 
+			id = "action_condicion_pago"
+			name = "Condiciones de pago"
+			res_model = "condicion.pago"
+			view_mode = "tree,form"
+		/>
+
+		<act_window 
+			id = "action_sub_diario"
+			name = "Sub diarios"
+			res_model = "sub.diario"
+			view_mode = "tree,form"
+		/>
+
+		<act_window 
+			id = "action_plan_contable"
+			name = "Plan contable"
+			res_model = "plan.contable"
+			view_mode = "tree,form"
+		/>
+
+		<act_window 
+			id = "action_caja_banco"
+			name = "Bancos"
+			res_model = "caja.banco"
+			view_mode = "tree,form"
+		/>
+		
+	</data>
+</odoo>

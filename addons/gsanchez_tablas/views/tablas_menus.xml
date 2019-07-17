@@ -1,0 +1,75 @@
+<odoo>
+	<data>		
+		<!-- Menús -->
+		<menuitem 
+			name = "ContaSQL" 
+			id = "menu_contasql_root" 
+			web_icon="gsanchez_tablas,static/description/icon.png" 
+			sequence = "10"
+		/>
+
+		<menuitem 
+			name = "Tablas"
+			id = "menu_tablas"
+			sequence = "10"
+			parent = "menu_contasql_root"
+		/>
+
+		<menuitem 
+			name = "Tipos de documentos"
+			id = "menu_tipo_documento"
+			sequence = "10"
+			parent = "menu_tablas"
+			action = "action_tipo_documento"
+		/>
+		
+		<menuitem 
+			name = "Tipos de documentos de identidad"
+			id = "menu_tipo_documento_identidad"
+			sequence = "20"
+			parent = "menu_tablas"
+			action = "action_tipo_documento_identidad"
+		/>
+
+		<menuitem 
+			name = "Formas de pago"
+			id = "menu_forma_pago"
+			sequence = "30"
+			parent = "menu_tablas"
+			action = "action_forma_pago"
+		/>
+
+		<menuitem 
+			name = "Condiciones de pago"
+			id = "menu_condicion_pago"
+			sequence = "40"
+			parent = "menu_tablas"
+			action = "action_condicion_pago"
+		/>
+
+		<menuitem 
+			name = "Sub diarios"
+			id = "menu_sub_diario"
+			sequence = "50"
+			parent = "menu_tablas"
+			action = "action_sub_diario"
+		/>
+
+		<menuitem 
+			name = "Plan contable"
+			id = "menu_plan_contable"
+			sequence = "60"
+			parent = "menu_tablas"
+			action = "action_plan_contable"
+		/>
+		
+		<menuitem 
+			name = "Bancos"
+			id = "menu_caja_banco"
+			sequence = "70"
+			parent = "menu_tablas"
+			action = "action_caja_banco"
+		/>
+
+	</data>
+</odoo>

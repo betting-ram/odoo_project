@@ -1,0 +1,20 @@
+<odoo>
+	<data>
+		<!-- Acctiones -->
+		<record id="action_asiento_cabecera" model="ir.actions.server">
+			<field name="name">Asientos varios</field>
+			<field name="model_id" ref="model_asiento_cabecera" />
+			<field name="state">code</field>
+			<field name="code">
+				action = {
+					"name": "Asientos varios",
+	                "type": "ir.actions.act_window",
+	                "view_mode": "tree,form",
+	                "res_model": "asiento.cabecera",
+	                "domain": [('company_id', '=', model.env.user.company_id.id)],
+	            }
+			</field>
+		</record>
+
+	</data>
+</odoo>

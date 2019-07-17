@@ -1,0 +1,40 @@
+<odoo>
+	<data>
+		<!-- Asiento cabecera -->
+		<record id = "form_asiento_cabecera" model = "ir.ui.view">
+			<field name = "name">Asiento cabecera</field>
+			<field name = "model">asiento.cabecera</field>
+			<field name = "arch" type = "xml">
+				<form>
+					<sheet>
+						<group>
+							<field name="company_id" string="Compañia" groups="base.group_multi_company" options="{'no_create': True}"/>
+							<field name = "anyo" />
+							<field name = "mes" />
+							<field name = "sub_diario_id" />
+							<field name = "name" />
+							<field name = "fecha" />
+							<field name = "glosa" />
+							<field name = "debe" />
+							<field name = "haber" />
+						</group>
+						<notebook>
+				            <page string="Detalle del asiento" name="whiteboard">
+			              		<field name="asiento_detalle_ids" mode="tree,kanban">
+			                		<tree string="Detalle" editable="bottom" >
+										<field name = "orden" />
+										<field name = "plan_contable_id" />
+										<field name = "name" />
+										<field name = "debe" />
+										<field name = "haber" />
+					                </tree>
+				            	</field>
+					        </page>
+					    </notebook>
+					</sheet>
+				</form>
+			</field>
+		</record>
+
+	</data>
+</odoo>

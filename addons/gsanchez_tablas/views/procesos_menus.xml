@@ -1,0 +1,20 @@
+<odoo>
+	<data>		
+		<!-- Menús -->
+		<menuitem 
+			name = "Procesos"
+			id = "menu_procesos"
+			sequence = "20"
+			parent = "menu_contasql_root"
+		/>
+
+		<menuitem 
+			name = "Asientos varios"
+			id = "menu_asiento_cabecera"
+			sequence = "10"
+			parent = "menu_procesos"
+			action = "action_asiento_cabecera"
+		/>
+
+	</data>
+</odoo>

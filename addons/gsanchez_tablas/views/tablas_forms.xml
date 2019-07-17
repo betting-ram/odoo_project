@@ -1,0 +1,147 @@
+<odoo>
+	<data>
+		<!-- Tipos de documentos -->
+		<record id = "form_tipo_documento" model = "ir.ui.view">
+			<field name = "name">Tipo de documento</field>
+			<field name = "model">tipo.documento</field>
+			<field name = "arch" type = "xml">
+				<form>
+					<sheet>
+						<group>
+							<field name="company_id" string="Compañia" groups="base.group_multi_company" options="{'no_create': True}"/>
+							<field name = "name" />
+							<field name = "descripcion" />
+							<field name = "abreviatura" />
+						</group>
+					</sheet>
+				</form>
+			</field>
+		</record>
+		
+		<!-- Tipos de documentos de identidad -->
+		<record id = "form_tipo_documento_identidad" model = "ir.ui.view">
+			<field name = "name">Tipo de documento de identidad</field>
+			<field name = "model">tipo.documento.identidad</field>
+			<field name = "arch" type = "xml">
+				<form>
+					<sheet>
+						<group>
+							<field name="company_id" string="Compañia" groups="base.group_multi_company" options="{'no_create': True}"/>
+							<field name = "name" />
+							<field name = "descripcion" />
+							<field name = "abreviatura" />
+						</group>
+					</sheet>
+				</form>
+			</field>
+		</record>
+
+		<!-- Formas de pago -->
+		<record id = "form_forma_pago" model = "ir.ui.view">
+			<field name = "name">Forma de pago</field>
+			<field name = "model">forma.pago</field>
+			<field name = "arch" type = "xml">
+				<form>
+					<sheet>
+						<group>
+							<field name="company_id" string="Compañia" groups="base.group_multi_company" options="{'no_create': True}"/>
+							<field name = "name" />
+							<field name = "descripcion" />
+							<field name = "abreviatura" />
+						</group>
+					</sheet>
+				</form>
+			</field>
+		</record>
+
+		<!-- Condiciones de pago -->
+		<record id = "form_condicion_pago" model = "ir.ui.view">
+			<field name = "name">Condiciones de pago</field>
+			<field name = "model">condicion.pago</field>
+			<field name = "arch" type = "xml">
+				<form>
+					<sheet>
+						<group>
+							<field name="company_id" string="Compañia" groups="base.group_multi_company" options="{'no_create': True}"/>
+							<field name = "name" />
+							<field name = "descripcion" />
+							<field name = "dias" />
+						</group>
+					</sheet>
+				</form>
+			</field>
+		</record>
+
+		<!-- Sub diarios -->
+		<record id = "form_sub_diario" model = "ir.ui.view">
+			<field name = "name">Sub diarios</field>
+			<field name = "model">sub.diario</field>
+			<field name = "arch" type = "xml">
+				<form>
+					<sheet>
+						<group>
+							<field name="company_id" string="Compañia" groups="base.group_multi_company" options="{'no_create': True}"/>
+							<field name = "name" />
+							<field name = "descripcion" />
+						</group>
+					</sheet>
+				</form>
+			</field>
+		</record>
+		
+		<!-- Plan contable -->
+		<record id = "form_plan_contable" model = "ir.ui.view">
+			<field name = "name">Plan contable</field>
+			<field name = "model">plan.contable</field>
+			<field name = "arch" type = "xml">
+				<form>
+					<sheet>
+						<group>
+							<group name = "group_left">
+								<field name="company_id" string="Compañia" groups="base.group_multi_company" options="{'no_create': True}"/>
+								<field name = "name" />
+								<field name = "descripcion" />
+								<field name = "codsunat" />
+							</group>
+							<group name = "group_right">
+								<field name = "nivel" />
+								<field name = "tipo" />
+								<field name = "analisis" />
+							</group>
+						</group>
+					</sheet>
+				</form>
+			</field>
+		</record>
+
+		<!-- Caja / Bancos -->
+		<record id = "form_caja_banco" model = "ir.ui.view">
+			<field name = "name">Banco</field>
+			<field name = "model">caja.banco</field>
+			<field name = "arch" type = "xml">
+				<form>
+					<sheet>
+						<group>
+							<field name="company_id" string="Compañia" groups="base.group_multi_company" options="{'no_create': True}"/>
+							<field name = "name" />
+							<field name = "descripcion" />
+						</group>
+						<notebook>
+				            <page string="Cuentas" name="whiteboard">
+			              		<field name="caja_banco_cuenta_ids" mode="tree,kanban">
+			                		<tree string="Cuentas" editable="bottom" >
+										<field name = "name" />
+										<field name = "cuenta" />
+										<field name = "cci" />
+										<field name = "plan_contable_id" />
+					                </tree>
+				            	</field>
+					        </page>
+					    </notebook>
+					</sheet>
+				</form>
+			</field>
+		</record>
+
+	</data>
+</odoo>

@@ -1,0 +1,22 @@
+<odoo>
+	<data>
+		<!-- Asiento cabecera -->
+		<record id = "tree_asiento_cabecera" model = "ir.ui.view">
+			<field name = "name">Asiento cabecera</field>
+			<field name = "model">asiento.cabecera</field>
+			<field name = "arch" type = "xml">
+				<tree>
+					<field name = "anyo" />
+					<field name = "mes" />
+					<field name = "sub_diario_id" />
+					<field name = "name" />
+					<field name = "fecha" />
+					<field name = "glosa" />
+					<field name = "debe" />
+					<field name = "haber" />
+				</tree>
+			</field>
+		</record>
+
+	</data>
+</odoo>
