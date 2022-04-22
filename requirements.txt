@@ -39,7 +39,7 @@ pycparser==2.19
 pycrypto==2.6.1
 pymessenger==0.0.7.0
 pyOpenSSL==19.0.0
-PyPDF2==1.26.0
+PyPDF2==1.27.5
 python-dotenv==0.8.2
 pytz==2018.9
 requests==2.21.0
